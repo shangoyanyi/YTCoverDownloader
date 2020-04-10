@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title> YT Cover Downloader </title>
+    <style>
+      body{
+        background: #efefef;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius:16px;
+        width:240px;
+        height:32px;
+        padding-left:10px;
+        margin-right:14px;
+        background: #eee;
+        box-shadow: inset 4px 4px 8px #ccc, inset -4px -4px 8px #efefef;
+        outline:none;
+      }
+      .btn {                
+        height: 36px;
+        width: 60px;
+        border-radius: 50px;
+        background: #eee;
+        color: #888;
+        border: none;
+        box-shadow:  4px 4px 8px #aaa, -4px -4px 8px #efefef;
+        outline:none;
+      }
+      .btn:active {        
+        color: #888;        
+        box-shadow: 2px 2px 4px #aaa, -2px -2px 4px #efefef;
+        outline:none;
+      }
+    </style>
+  </head>
+
+  <body style='width:340px;'>
+    <div style='float:left;'>
+      <img src='logo.png' style='width:60px; height:auto;'>
+    </div>
+    <div style='padding-left:75px; height:60px;'>
+      <h1 style='padding-top:15px;'>YT Cover Downloader</h1>
+    </div>
+
+    <div style='padding-top:10px; border-bottom: 1px solid #eee;'></div>
+
+    <div id='form1'>
+      <P>輸入影片編號</P>
+      <input type='text' id='video-id' value='' placeholded='輸入影片編號'/>
+      <button id="submit" class='btn'>submit</button>   
+    </div>
+
+    <div style='padding-top:10px; border-bottom: 1px solid #eee;'></div>
+
+    <div id="content-wrapper">      
+      <div id="content"></div>
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
