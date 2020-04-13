@@ -1,11 +1,11 @@
 ﻿# YTCoverDownloader [chrome extension]
 ![logo](/logo.png)
 
-快速下載 Youtube 影面的封面圖片。
+快速下載 Youtube 影片的封面圖片。
 
 ## 專案說明
-在使用Notion Clipper時發現擷取youtube影片並不會包含封面圖片，導致在Gallery view下沒有封面圖片。
-原本是手動找出YouTube的封面圖片下載連結，但因程序麻煩，因此才做成擴充功能方便快速擷取。
+在使用Notion Web Clipper時發現擷取YouTube影片並不會包含封面圖片，導致在Gallery View下沒有封面圖片。
+原本是手動找出YouTube的封面圖片下載連結，但因程序麻煩，因此做成擴充功能方便快速擷取。
 
 ## 開發說明
 - 2020/04/13 1.0 版開發完成
