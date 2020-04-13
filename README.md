@@ -1,4 +1,6 @@
 ﻿# YTCoverDownloader [chrome extension]
+![logo](/logo.png)
+
 快速下載 Youtube 影面的封面圖片。
 
 ## 專案說明
