@@ -20,14 +20,40 @@ $(document).ready(function(){
         let url_2 = 'https://img.youtube.com/vi/' + vid + '/2.jpg';
         let url_3 = 'https://img.youtube.com/vi/' + vid + '/3.jpg';
 
-        $('#content').append('<p>高解析度大圖（1280 × 720）:<br><a href="' + url_maxresdefault + '" target="_blank"> ' + url_maxresdefault + '</a></p>');
-        $('#content').append('<p>標準清晰圖（640 × 480）:<br> <a href="' + url_sddefault + '" target="_blank"> ' + url_sddefault + '</a></p>');
-        $('#content').append('<p>高品質縮圖（480×360）:<br> <a href="' + url_hqdefault + '" target="_blank"> ' + url_hqdefault + '</a></p>');
-        $('#content').append('<p>播放器背景縮圖（480×360）:<br> <a href="' + url_0 + '" target="_blank"> ' + url_0 + '</a></p>');
-        $('#content').append('<p>影片開始畫面縮圖（120×90）:<br> <a href="' + url_1 + '" target="_blank"> ' + url_1 + '</a></p>');
-        $('#content').append('<p>影片中間片段縮圖（120×90）:<br> <a href="' + url_2 + '" target="_blank"> ' + url_2 + '</a></p>');
-        $('#content').append('<p>影片結束縮圖（120×90）:<br> <a href="' + url_3 + '" target="_blank"> ' + url_3 + '</a></p>');
+        // 產生左欄 flex-item
+        $('#content-flex').append(flexItemLeftBuilder('高解析度大圖（1280 × 720）', url_maxresdefault));
+        
+        // 產生右欄 flex-item
+        let flexItemRight = '';
+        flexItemRight += '<div class="flex-item">';
+        flexItemRight +=   listItemBuilder('標準清晰圖（640 × 480）', url_sddefault);
+        flexItemRight +=   listItemBuilder('高品質縮圖（480×360）', url_hqdefault);
+        flexItemRight +=   listItemBuilder('播放器背景縮圖（480×360）', url_0);
+        flexItemRight +=   listItemBuilder('影片開始畫面縮圖（120×90）', url_1);
+        flexItemRight +=   listItemBuilder('影片中間片段縮圖（120×90）', url_2);
+        flexItemRight +=   listItemBuilder('影片結束縮圖（120×90）', url_3);
+        flexItemRight += '</div>';
+
+        $('#content-flex').append(flexItemRight);
     });
+
+    // 產生左欄 flex-item
+    function flexItemLeftBuilder(title, url){
+        let item = '';
+        item += '<div class="flex-item ">';
+        item +=   '<p><img src="' + url + '"></p>';
+        item +=   '<p>' + title + '<br>';
+        item +=   '<a href="' + url + '" target="_blank"> ' + url + '</a></p>';        
+        item += '</div>';
+
+        return item;
+    }    
+
+    // 產生 list-item
+    function listItemBuilder(title, url){
+        let item = '<p>'+ title +'<br><a href="' + url + '" target="_blank"> ' + url + '</a></p>'
+        return item;
+    }
 
     // 取得目前YT頁面的所有封面圖片下載連結
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {

@@ -4,8 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title> YT Cover Downloader </title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
       body{
         background: #efefef;
+        font-family: 'Noto Sans TC', sans-serif;        
       }
       input {
         border: none;
@@ -34,31 +36,59 @@
         box-shadow: inset 1px 1px 2px #aaa, inset -1px -1px 2px #efefef;        
         outline:none;
       }
+
+      a {
+        color: #555;
+        text-decoration: none;
+        font-size:12px;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 16px;
+      }
+      .flex-item {
+        flex:1;         
+        padding:12px; 
+        margin:10px;
+        background:#efefef; 
+        box-shadow:4px 4px 20px #aaa;
+      }
+      .flex-item2 {
+        flex: 2;        
+      }          
+      .flex-item img {
+        width:100%; 
+        filter: grayscale(0%) brightness(100%);
+      }
     </style>
   </head>
 
-  <body style='width:340px;'>
+  <body style='width:768px;'>
+    <!-- head -->
     <div style='float:left;'>
       <img src='logo.png' style='width:60px; height:auto;'>
+    </div>    
+    <div id='form1' style='float:right;'>
+      <P>影片編號&nbsp;&nbsp;
+      <input type='text' id='video-id' value='' placeholded='影片編號'/>
+      <button id="submit" class='btn'>submit</button>   
+      </P>
     </div>
     <div style='padding-left:75px; height:60px;'>
-      <h1 style='padding-top:15px;'>YT Cover Downloader</h1>
+      <h1 style='padding-top:10px;'>YT Cover Downloader</h1>
     </div>
-
-    <div style='padding-top:10px; border-bottom: 1px solid #eee;'></div>
-
-    <div id='form1'>
-      <P>輸入影片編號</P>
-      <input type='text' id='video-id' value='' placeholded='輸入影片編號'/>
-      <button id="submit" class='btn'>submit</button>   
-    </div>
-
-    <div style='padding-top:10px; border-bottom: 1px solid #eee;'></div>
-
+    <div style='padding-top:10px; border-bottom: 1px solid #ccc;'></div>
+    <!-- end of head -->
+    
+    <!-- body-->
     <div id="content-wrapper">      
-      <div id="content"></div>
+      <div id="content-flex" class='flex-container'></div>      
     </div>
-
+    <!-- end of body -->
     <script src="jquery-3.4.1.min.js"></script>
     <script src="popup.js"></script>
   </body>
