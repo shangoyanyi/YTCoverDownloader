@@ -5,8 +5,15 @@
     <title> YT Cover Downloader </title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+      
+      @keyframes btn-clicked {
+        from {box-shadow:  2px 2px 4px #aaa, -2px -2px 4px #f5f5f5;}
+        50% {box-shadow:  0px 0px 0px #aaa, 0px 0px 0px #f5f5f5;}
+        to {box-shadow: inset 1px 1px 2px #aaa, inset -1px -1px 2px #f5f5f5;}
+      }
+      
       body{
-        background: #efefef;
+        background: #f5f5f5;
         font-family: 'Noto Sans TC', sans-serif;        
       }
       input {
@@ -17,24 +24,29 @@
         height:32px;
         padding-left:10px;
         margin-right:14px;
-        background: #eee;
-        box-shadow: inset 1px 1px 2px #ccc, inset -1px -1px 2px #efefef;
+        background: #f5f5f5;
+        box-shadow: inset 1px 1px 2px #aaa, inset -1px -1px 2px #f5f5f5;
         outline:none;
+      }
+      input:focus {
+        background: #fafafa;
       }
       .btn {                
         height: 36px;
         width: 60px;
         border-radius: 50px;
-        background: #eee;
+        background: #f5f5f5;
         color: #888;
         border: none;
-        box-shadow:  2px 2px 4px #aaa, -2px -2px 4px #efefef;
+        box-shadow:  2px 2px 4px #aaa, -2px -2px 4px #f5f5f5;
         outline:none;
       }
       .btn:active {        
         color: #888;        
-        box-shadow: inset 1px 1px 2px #aaa, inset -1px -1px 2px #efefef;        
+        box-shadow: inset 1px 1px 2px #aaa, inset -1px -1px 2px #f5f5f5;
         outline:none;
+        animation: btn-clicked 0.2s;
+        
       }
 
       a {
@@ -54,7 +66,7 @@
         flex:1;         
         padding:12px; 
         margin:10px;
-        background:#efefef; 
+        background:#fff; 
         box-shadow:4px 4px 20px #aaa;
       }
       .flex-item2 {

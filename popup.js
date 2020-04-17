@@ -9,7 +9,7 @@ $(document).ready(function(){
     // 影片中間片段縮圖（120×90）** https://img.youtube.com/vi/**xxxxxxx**/2.jpg
     // 影片結束縮圖（120×90）** https://img.youtube.com/vi/**xxxxxxx**/3.jpg
     $('#submit').on('click', function(){
-        $('#content').html('');
+        $('#content-flex').html('');
 
         let vid = $('#video-id').val();
         let url_maxresdefault   = 'https://img.youtube.com/vi/' + vid + '/maxresdefault.jpg';
