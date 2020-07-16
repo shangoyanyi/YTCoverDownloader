@@ -2,6 +2,9 @@
   "name": "YTCoverDownloader",
   "description" : "Helps to download YouTube video cover image",
   "version": "1.0",
+  "icons":{  
+    "128": "logo.png"
+  },
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": "logo.png"
